@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
-    // 检查本地存储的主题或系统偏好
     const getPreferredTheme = () => {
         const storedTheme = localStorage.getItem('theme');
         if (storedTheme) {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     };
 
-    // 应用主题
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             htmlElement.classList.add('dark');
@@ -20,25 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // 初始设置
     let currentTheme = getPreferredTheme();
     applyTheme(currentTheme);
 
-    // 切换按钮点击事件
     themeToggleBtn.addEventListener('click', () => {
         currentTheme = currentTheme === 'light' ? 'dark' : 'light';
         applyTheme(currentTheme);
         localStorage.setItem('theme', currentTheme);
     });
 
-    // 监听系统主题变化
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
         if (!localStorage.getItem('theme')) {
             applyTheme(e.matches ? 'dark' : 'light');
         }
     });
 
-    // 动态获取最新版本下载链接
     const fetchLatestRelease = async () => {
         const dlBtn = document.getElementById('android-dl-btn');
         const dlText = document.getElementById('dl-text');
@@ -52,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
                 const latestVersion = data.tag_name; 
                 
-                // 更换下载链接并更新提示信息
                 if (latestVersion) {
                     dlBtn.href = `https://gitee.com/restarhalf/schedule/releases/download/${latestVersion}/app-release.apk`;
                     dlText.textContent = `下载 Android 版 `;

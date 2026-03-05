@@ -1,4 +1,4 @@
-/* Custom styles generally not needed heavy due to Tailwind, but we can add neat animations */
+
 html {
     scroll-behavior: smooth;
 }
@@ -8,7 +8,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Optional soft gradient background */
 body::before {
     content: '';
     position: fixed;

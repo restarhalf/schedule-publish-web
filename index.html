@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366f1',
+                        primary: bg-blue,
                     }
                 }
             }
@@ -36,6 +36,11 @@
                         <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
                         <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-yellow-400"></i>
                     </button>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4" id="add">
+                        <a id="add-btn" href="https://qm.qq.com/cgi-bin/qm/qr?k=m6Jidr6OGC1tJAHaAoK5Zrgt1libSH86&jump_from=webapi&authKey=aK+hsnk1UwcNvF9JAc9ZfInt7wYrpOS7MJery63XOD6ec/zX/5/2NwixU7Ek6T7T" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-500 dark:bg-blue-500 text-white dark:text-slate-900 px-3 py-2 rounded-2xl font-semibold transition-all hover:scale-105 shadow-xl">
+                            <span id="add-text">加入 QQ 群</span>
+                        </a>
+                    </div>
             </div>
         </div>
     </nav>
@@ -44,12 +49,11 @@
     <main class="flex-grow pt-32 pb-12">
         <section class="max-w-4xl mx-auto px-4 text-center">
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 dark:text-white">
-                为大连民族大学安卓用户学生打造的课程表
+                为安卓用户学生打造的课程表
             </h1>
             <img src="img/ic_launcher.webp" alt="App Icon" class="w-32 h-32 mx-auto mb-6 mix-blend-multiply dark:mix-blend-normal"> 
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4" id="download">
                 <a id="android-dl-btn" href="https://gitee.com/restarhalf/schedule/releases/download/1.9/app-release.apk" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3.5 rounded-2xl font-semibold transition-all hover:scale-105 shadow-xl">
-                    <i data-lucide="download" class="w-5 h-5"></i>
                     <span id="dl-text">下载 Android 版</span>
                 </a>
             </div>
