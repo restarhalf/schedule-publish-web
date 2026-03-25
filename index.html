@@ -3,97 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="大民课程表发布页，支持 Android 与 Apple 下载">
     <title>大民课程表 - 发布页</title>
     <link rel="icon" href="img/ic_launcher.webp" type="image/webp">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: bg-blue,
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 min-h-screen flex flex-col">
+<body class="miuix-shell text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+    <div class="ambient-layer" aria-hidden="true"></div>
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-white/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-800">
+    <nav class="fixed top-0 w-full z-50 border-b border-white/40 dark:border-slate-700/40 backdrop-blur-xl bg-white/55 dark:bg-slate-900/55">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-2">
-                    <img src="img/ic_launcher.webp" alt="Logo" class="w-9 h-9 mix-blend-multiply dark:mix-blend-normal">
-                    <span class="font-bold text-xl tracking-tight">大民课程表</span>
+                <div class="flex items-center gap-3">
+                    <img src="img/ic_launcher.webp" alt="Logo" class="w-10 h-10 rounded-2xl shadow-sm ring-1 ring-white/80 dark:ring-slate-700/70">
+                    <p class="font-semibold text-lg leading-none">大民课程表</p>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
-                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
-                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-yellow-400"></i>
+                <div class="flex items-center gap-3">
+                    <button id="theme-toggle" class="mi-toggle-btn" aria-label="切换深色模式">
+                        <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
                     </button>
-                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4" id="add">
-                        <a id="add-btn" href="https://qm.qq.com/cgi-bin/qm/qr?k=m6Jidr6OGC1tJAHaAoK5Zrgt1libSH86&jump_from=webapi&authKey=aK+hsnk1UwcNvF9JAc9ZfInt7wYrpOS7MJery63XOD6ec/zX/5/2NwixU7Ek6T7T" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-500 dark:bg-blue-500 text-white dark:text-slate-900 px-3 py-2 rounded-2xl font-semibold transition-all hover:scale-105 shadow-xl">
-                            <span id="add-text">加入 QQ 群</span>
-                        </a>
-                    </div>
+                    <a id="add-btn" href="https://qm.qq.com/cgi-bin/qm/qr?k=m6Jidr6OGC1tJAHaAoK5Zrgt1libSH86&jump_from=webapi&authKey=aK+hsnk1UwcNvF9JAc9ZfInt7wYrpOS7MJery63XOD6ec/zX/5/2NwixU7Ek6T7T" class="mi-btn mi-btn-secondary px-4 py-2 text-sm">
+                        <i data-lucide="message-circle-plus" class="w-4 h-4"></i>
+                        <span id="add-text">加入 QQ 群</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="flex-grow pt-32 pb-12">
-        <section class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 dark:text-white">
-                为安卓用户学生打造的课程表
-            </h1>
-            <img src="img/ic_launcher.webp" alt="App Icon" class="w-32 h-32 mx-auto mb-6 mix-blend-multiply dark:mix-blend-normal"> 
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4" id="download">
-                <a id="android-dl-btn" href="https://gitee.com/restarhalf/schedule/releases/download/1.9/app-release.apk" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3.5 rounded-2xl font-semibold transition-all hover:scale-105 shadow-xl">
-                    <span id="dl-text">下载 Android 版</span>
-                </a>
+    <main class="flex-grow pt-28 pb-14">
+        <section class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="hero-panel text-center p-6 sm:p-10 md:p-14">
+                <h1 class="hero-title text-4xl md:text-6xl font-black tracking-tight mt-5">为学生打造的高效课程表</h1>
+                <p class="mt-4 text-slate-600 dark:text-slate-300">轻量、专注、易用，课程安排和提醒一目了然。</p>
+
+                <div class="mt-8 flex justify-center">
+                    <img src="img/ic_launcher.webp" alt="App Icon" class="app-icon">
+                </div>
+
+                <div id="download" class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto">
+                    <a id="android-dl-btn" href="https://gitee.com/restarhalf/schedule/releases/download/v4.0.1/app-release.apk" class="mi-btn mi-btn-primary px-6 py-3.5">
+                        <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.4472,4.10555 C18.9412,4.35254 19.1414,4.95321 18.8944,5.44719 L17.7199,7.79631 C20.3074,9.6038 22,12.6042 22,16 L22,17 C22,18.1046 21.1046,19 20,19 L4,19 C2.89543,19 2,18.1046 2,17 L2,16 C2,12.6042 3.69259,9.60379 6.28014,7.79631 L5.10558,5.44719 C4.85859,4.95321 5.05881,4.35254 5.55279,4.10555 C6.04677,3.85856 6.64744,4.05878 6.89443,4.55276 L8.028,6.8199 C9.24553,6.29239 10.5886,6 12,6 C13.4114,6 14.7545,6.29239 15.972,6.81991 L17.1056,4.55276 C17.3526,4.05878 17.9532,3.85856 18.4472,4.10555 Z M7.5,12 C6.67157,12 6,12.6716 6,13.5 C6,14.3284 6.67157,15 7.5,15 C8.32843,15 9,14.3284 9,13.5 C9,12.6716 8.32843,12 7.5,12 Z M16.5,12 C15.6716,12 15,12.6716 15,13.5 C15,14.3284 15.6716,15 16.5,15 C17.3284,15 18,14.3284 18,13.5 C18,12.6716 17.3284,12 16.5,12 Z" fill="currentColor"/>
+                        </svg>
+                        <span id="dl-text">下载 Android 版</span>
+                    </a>
+                    <a id="apple-dl-btn" href="https://gitee.com/restarhalf/schedule/releases/download/v4.0.1/app-release.ipa" class="mi-btn mi-btn-ghost px-6 py-3.5">
+                        <svg class="dl-icon" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/>
+                        </svg>
+                        <span id="ios-dl-text">下载 Apple 版</span>
+                    </a>
+                </div>
+
+                <p id="version-info" class="mt-5 text-sm text-slate-500 dark:text-slate-400">正在检查最新版本...</p>
             </div>
-            <p id="version-info" class="mt-4 text-sm text-slate-500">正在检查最新版本...</p>
         </section>
 
-        <!-- Features -->
-        <section class="max-w-6xl mx-auto px-4 py-20 mt-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 transition-transform">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6">
-                        <i data-lucide="bell-ring" class="w-6 h-6"></i>
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-14 mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <article class="feature-card">
+                    <div class="feature-icon bg-sky-100 text-sky-700 dark:bg-sky-900/45 dark:text-sky-300">
+                        <i data-lucide="bell-ring" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">精准考试·课程提醒</h3>
-                    <p class="text-slate-600 dark:text-slate-400">闹钟机制，帮您考试·上课不再迟到。</p>
-                </div>
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 transition-transform">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6">
-                        <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                    <h3>精准提醒</h3>
+                    <p>课程与考试支持提醒，不漏关键信息，时间安排更从容。</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon bg-cyan-100 text-cyan-700 dark:bg-cyan-900/45 dark:text-cyan-300">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">极简卡片 UI</h3>
-                    <p class="text-slate-600 dark:text-slate-400">沉浸式的界面设计，去除一切干扰体验的冗余元素，一眼获取当日重点。</p>
-                </div>
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 transition-transform">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    <h3>极简卡片 UI</h3>
+                    <p>重点信息优先展示，减少干扰，打开即看懂当天安排。</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon bg-emerald-100 text-emerald-700 dark:bg-emerald-900/45 dark:text-emerald-300">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">完全隐私保护</h3>
-                    <p class="text-slate-600 dark:text-slate-400">本地优先策略架构，无广告、无多余的权限获取，真正属于您的私人应用。</p>
-                </div>
+                    <h3>隐私优先</h3>
+                    <p>本地优先策略，无广告、无多余权限，数据掌握在你手里。</p>
+                </article>
             </div>
         </section>
-    
     </main>
 
-    <!-- Init -->
+    <footer class="px-4 pb-8 text-center text-sm text-slate-500 dark:text-slate-400">© <span id="year"></span> 大民课程表</footer>
+
     <script src="js/main.js"></script>
-    <script>
-        lucide.createIcons();
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
